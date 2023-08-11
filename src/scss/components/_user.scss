@@ -2,7 +2,7 @@
   height: 869px;
 }
 
-.block_wrapper{
+.block__wrapper{
   display: flex;
   justify-content: center;
 }
@@ -19,10 +19,9 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  width: 65%;
+  width: 33%;
     img{
         width: 320px;
-        height: 215px;
     }
     .span__wrapper{
       gap: 10px;

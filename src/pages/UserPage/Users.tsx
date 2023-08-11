@@ -126,22 +126,11 @@ export const Users = () => {
         console.error(error)
       })
   }
-  const list = [
-    {name:'Мой профиль',path:userSvg},
-    {name:'Мои отзывы',path:feedbackSvg},
-    {name:'Адресная книга',path:mapSvg},
-    {name:'Выйти',path:exitSvg},
-  ]
   return (
     <div className="wrapper">
       <div className="wrapper__container">
         <Header />
         <div className="block__wrapper">
-          <div className="usersNavbar">
-            <ul>
-              {list.map((obj,i) =><li key={i}><img src={obj.path}/> {obj.name}</li>)}
-            </ul>
-          </div>
           <div className="user">
           <div className="user__info">
             <h3>Личный кабинет</h3>
