@@ -1,0 +1,144 @@
+@import './../variables.scss';
+
+.header {
+  border-bottom: 2px solid $gray-line;
+  padding-top: 20px;
+  svg{
+      stroke: #007bff;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 645px) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__elements {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    gap: 20px;
+  }
+  &__cartsvg{
+    &::after{
+      position: absolute;
+    }
+  }
+  &__heartsvg{
+    &::after{
+      position: absolute;
+    }
+  }
+  &__profilesvg{
+    gap: 6px;
+    font-weight: 600;
+    &::after{
+      position: absolute;
+    }
+  }
+  &__element {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    img{
+      display: block;
+    }
+    &:hover {
+      background-color: #c6d4e4;
+      border-radius: 10px;
+      transition-duration: 0.5s;
+    }
+  }
+  &__span{
+    top: -3px;
+    left: 28px;
+    position: absolute;
+    display: inline-block;
+    text-align: -webkit-center;
+    border-radius: 30px;
+    background-color: #1364c0;
+    font-weight: 600;
+    width: 22px;
+    height: 22px;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 22px;
+}
+&__cartcounter{
+  position: relative;
+  span{
+    color: #fff;
+  }
+}
+&__heartcounter{
+  position: relative;
+  span{
+    color: #fff;
+  }
+}
+&__profilecounter{
+  span{
+    color: #1364c0;
+  }
+}
+
+
+  &__logo {
+    display: flex;
+
+    img {
+      margin-right: 15px;
+      width: 144px;
+      height: 130px;
+    }
+
+    h1 {
+      color: #181818;
+      font-size: 20px;
+      letter-spacing: 1%;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    p {
+      color: #7b7b7b;
+    }
+  }
+  &__search {
+    position: relative;
+    margin-right: 20px;
+    button {
+      position: absolute;
+      right: 18px;
+      top: 33%;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+    }
+    img {
+      width: 15px;
+      background: none;
+    }
+    input {
+      width: 735px;
+      height: 50px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 16px;
+      transition: border-color 0.3s ease-in-out;
+      padding: 26px;
+
+      &:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      &::placeholder {
+        color: #1364c0;
+      }
+    }
+  }
+}

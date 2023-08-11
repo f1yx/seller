@@ -1,0 +1,139 @@
+.favcontent {
+  height: 100vh;
+  &__items {
+    margin: 20px 0px 0px 30px;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+  }
+}
+.favItem-block {
+  border: 1px solid #1364c0;
+  border-radius: 15px;
+  width: 280px;
+  height:340px;
+  text-align: center;
+  margin-bottom: 45px;
+  &:hover{
+    transition-duration: 0.3s;
+    box-shadow: 3px 3px 10px #1364c0; 
+  }
+  &-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  &__image {
+    margin-top: 20px;
+    max-width: 260px;
+    height: 127px;
+  }
+  &__favourites{
+    margin: 5px 20px 0px 0px;
+    display: flex;
+    justify-content: end;
+    img{
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      &:hover {
+        background-color: #c6d4e4;
+        border-radius: 10px;
+      }
+    }
+  }
+  &__remove {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+
+    .button {
+      border-color: darken($color: $gray-line, $amount: 10);
+    }
+
+    svg {
+      transform: rotate(45deg);
+
+      path {
+        fill: darken($color: $gray-line, $amount: 15);
+      }
+    }
+
+    .button {
+      svg {
+        width: 11.5px;
+        height: 11.5px;
+      }
+      &:hover,
+      &:active {
+        border-color: darken($color: $gray-line, $amount: 80);
+        background-color: darken($color: $gray-line, $amount: 80);
+      }
+    }
+  }
+  
+  &__title {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1%;
+    margin-bottom: 20px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__selector {
+    display: flex;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 6px;
+
+    ul {
+      display: flex;
+      flex: 1;
+
+      &:first-of-type {
+        margin-bottom: 6px;
+      }
+
+      li {
+        padding: 8px;
+        flex: 1;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        @include noselect();
+        &.active {
+          background: #ffffff;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+          border-radius: 5px;
+          cursor: auto;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+
+
+  &__price {
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 27px;
+    letter-spacing: 0.015em;
+  }
+  &__strikeprice{
+    font-size: 19px;
+    text-decoration: line-through;
+    color: #8289a3;
+  }
+}

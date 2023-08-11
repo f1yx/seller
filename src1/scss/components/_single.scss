@@ -1,0 +1,159 @@
+.single {
+  height: calc(100%);
+  h1 {
+    font-size: 30px;
+    margin: 30px 0px 30px 0px;
+  }
+  &__item__img{
+    width: 90%;
+    height: 400px;
+  }
+  &__mouse__img{
+    width: 200px;
+  }
+  &__container {
+    margin: 0px 50px 0px 50px;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__carditem {
+    display: flex;
+    justify-content: space-around;
+    padding: 19px;
+  }
+  &__carditem__wrapper {
+    border: 1px solid #494646;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 600px;
+  }
+  &__commentscount {
+    border-bottom: 1px solid #494646;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  &__prices {
+    display: flex;
+    flex-direction: column;
+  }
+  &__card {
+    display: contents;
+  }
+  &__fullprice {
+    color: rgb(167, 156, 156);
+    text-decoration: line-through;
+    font-size: 20px;
+  }
+  &__currentprice {
+    font-size: 40px;
+  }
+  &__cardbutton {
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    height: 60px;
+    cursor: pointer;
+    background-color: #1364c0;
+    opacity: 0.8;
+    font-size: 16px;
+    color: white;
+
+    &:hover {
+      opacity: 1;
+      transition-duration: 0.5s;
+    }
+  }
+  &__comments {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 15px;
+    h2{
+        margin: 30px 0px 20px 0px;
+    }
+    h3{
+      font-size: 30px;
+      margin-top: 50px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 600px;
+      gap: 15px;
+      align-items: self-end;
+      input {
+        height: 50px;
+        width: 100%;
+        font-size: 15px;
+        &:hover {
+          box-shadow: 0px 0px 10px #1364c0;
+          transition-duration: 0.5s;
+        }
+      }
+      button{
+        width: 300px;
+        height: 45px;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        background-color: #1364c0;
+        opacity: 0.8;
+        cursor: pointer;
+        &:hover{
+            opacity: 1;
+            transition-duration:0.5s;
+
+        }
+      }
+    }
+  }
+  &__comment{
+    width: 1100px;
+    padding: 25px;
+    border: 1px solid gray;
+    border-radius: 10px;
+  }
+  &__account{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img{
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+    }
+    span{
+      font-size: 20px;
+    }
+  }
+  &__accountdesc{
+    display: flex;
+    align-items: center;
+  }
+  &__name{
+    margin-left: 15px;
+  }
+  &__description{
+    padding-top: 15px;
+  }
+  &__advantages{
+    display: flex;
+    padding: 10px 0px;
+    span{
+      color: gray;
+    }
+    p{
+      margin-left: 25px;
+    }
+  }
+
+}
