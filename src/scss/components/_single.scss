@@ -140,6 +140,9 @@
 	&__accountdesc {
 		display: flex;
 		align-items: center;
+		img {
+			object-fit: cover;
+		}
 	}
 	&__name {
 		margin-left: 15px;
