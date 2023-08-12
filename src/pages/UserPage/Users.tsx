@@ -126,6 +126,8 @@ export const Users = () => {
         console.error(error)
       })
   }
+  console.log(data);
+  
   return (
     <div className="wrapper">
       <div className="wrapper__container">
@@ -134,7 +136,7 @@ export const Users = () => {
           <div className="user">
           <div className="user__info">
             <h3>Личный кабинет</h3>
-            <img src={currentUser?.photoURL} alt="Фото" />
+            <img src={data?.photoURL} alt="Фото" />
             <div className="span__wrapper">
               <p>Имя: <span>{data?.displayName}</span></p>
               <p>Email: <span>{data?.email}</span></p>
